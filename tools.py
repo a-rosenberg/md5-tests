@@ -5,9 +5,12 @@ import time
 
 def timer(func):
     """Timing decorator with hooks to Python logging
+    
     Logs execution time at log level `info`.
+    
     Args:
         func (method):  Any method to be timed
+        
     Returns:
         func method output.
     """
