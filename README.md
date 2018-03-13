@@ -6,6 +6,11 @@
 - `python md5.py`
 
 ### Results
+Ran with 14 files, totalling 1.2 GB
+```
+rosenberg-co-lm:static arosenbe$ du -hs data/
+1.2G	data/
+```
 #### stdout
 ```
 /Users/arosenbe/anaconda2/bin/python /Users/arosenbe/Projects/md5_timing/md5.py
