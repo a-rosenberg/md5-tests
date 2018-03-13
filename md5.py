@@ -19,7 +19,7 @@ def get_md5(target):
     """Calculates md5 checksum for system file
 
     Args:
-        target (str):  Path to file
+        target (str):  System path to target file.
 
     Returns:
         hash (str): md5 checksum string.
@@ -69,7 +69,7 @@ def test(output_path='test.md5'):
     """Speed test for serial and threaded md5 generation
 
     Args:
-        output_path (str):  System path for threaded md5 checksum log
+        output_path (str):  System path for threaded md5 checksum log.
 
     Notes:
         Used log to confirm checksum veracity.
