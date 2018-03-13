@@ -34,7 +34,12 @@ def get_md5(target):
 
 @tools.timer
 def serial_md5():
-    """md5 calculation test for serial processing"""
+    """md5 calculation test for serial processing
+    
+    Returns:  
+        md5s (list):  List of tuples containing md5 checksum string
+            and target file path.
+    """
     md5s = []
     for file_path in target_files:
         md5s.append(get_md5(file_path))
@@ -48,12 +53,16 @@ def threaded_md5(threads=8):
     Args:
         threads (int): Number of spawned threads. Defaults to `8`.
 
+    Returns:  
+        md5s (list):  List of tuples containing md5 checksum string
+            and target file path.
+    
     Notes:
         Uses multiprocessing thread dummy tool.
     """
     pool = ThreadPool(threads)
-    results = pool.map(get_md5, target_files)
-    return results
+    md5s = pool.map(get_md5, target_files)
+    return md5s
 
 
 def test(output_path='test.md5'):
