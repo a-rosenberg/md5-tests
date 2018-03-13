@@ -1,4 +1,4 @@
-# md5 Multithread Speed Tests
+# Md5 Multithread Speed Tests
 
 ### Structure
 - main calls in `md5.py`
