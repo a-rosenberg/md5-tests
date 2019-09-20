@@ -17,8 +17,7 @@ def timer(func):
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
         start = time.time()
-        # wrapped method call
-        output = func(*args, **kwargs)
+        output = func(*args, **kwargs)  # wrapped method call
         end = time.time()
         execution_time = end - start
 
